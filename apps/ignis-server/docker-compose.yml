@@ -7,7 +7,10 @@ services:
       - "8082:8080"
     environment:
       - OBSIDIAN_VERSION=1.12.7
+      - PUID=1000
+      - PGID=1000
     volumes:
+      - /home/time/coding/axorum/axorum:/vaults/axorum
       - ./vaults:/vaults
       - ./data:/app/data
       - obsidian-app:/app/obsidian-app
